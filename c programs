@@ -24,3 +24,62 @@ int main() {
 =======================================================
 
 
+#include <stdio.h>
+
+int main() {
+    int a=30,b=29,c=2,d=55,e,ad,bd,cd,dd,temp;
+    if(a>b){
+        e=a;
+    }
+    else{
+        e=b;
+    }
+    if(e>c && e>d){
+         e=e;
+    }
+    else if(c>d){
+        e=c;
+    }
+  
+    else{
+        e=d;
+    }
+    ad = e-a;
+    bd = e-b;
+    cd = e-c;
+    dd = e-d;
+    if(ad == 0)
+    {
+        ad = e;
+    }
+    else if(bd == 0)
+    {
+        bd = e;
+    }
+    else if(cd == 0)
+    {
+        cd = e;
+    }
+    else
+    {
+        dd = e;
+    }
+    if(ad>bd){
+        e=bd;
+        temp=b;
+    }
+    else{
+        e=ad;
+        temp=a;
+    }
+    if(e<cd && e<dd){
+         printf("%d is second larger number",temp);
+    }
+    else if(cd<dd){
+        printf("%d is second larger number",c);
+    }
+  
+    else{
+        printf("%d  is second larger number",d);
+    }
+}
